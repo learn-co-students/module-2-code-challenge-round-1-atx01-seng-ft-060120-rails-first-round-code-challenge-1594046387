@@ -1,0 +1,22 @@
+<h3>Edit a Power </h3>
+<%= form_for @power do |f| %>
+    <p>Enter New Power Name: <%= f.text_field :name, placeholder : f.name %></p>
+    <p>Enter New Power Description : <%= f.text_field :description, placeholder : f.description %></p>
+  
+    <%= f.submit %>
+  <% end %>
+
+
+
+Show a form to update a Power. It should have:
+
+- a text input for the name with the current name already displayed
+- a text area input for the description with the current description already displayed
+- a list of Heroines, with a checkbox for each one
+- a submit button
+
+The update action should create associations for each of the Heroines the user selected.
+
+When the form successfully saves, the user should be redirected to the Power show page.
+
+The power show page should show a link to the edit page.

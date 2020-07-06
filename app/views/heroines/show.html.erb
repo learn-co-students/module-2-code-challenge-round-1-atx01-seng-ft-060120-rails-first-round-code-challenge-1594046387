@@ -1,0 +1,16 @@
+<h1> The heroines name is : <%=@heroine.name%> </h1>
+<h2> The heroines supername is : <%=@heroine.super_name%> </h1>
+
+<h2> The Heroines powers are : </h2>
+
+<ul>
+<% @heroines.powers.each do |x| %>
+  <li>
+   <%= x.power %>
+
+  </li>
+  <br>
+   <% end %>
+</ul>
+
+

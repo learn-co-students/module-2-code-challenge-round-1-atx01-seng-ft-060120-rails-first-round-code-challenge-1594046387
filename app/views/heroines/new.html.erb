@@ -1,0 +1,9 @@
+<%= form_for @heroine do |t| %>
+    <p> Enter Heroine name : <%= t.text_field :name, placeholder : "Heroine Name" %> </p>
+    <p> Enter Heroine super name : <%= t.text_field :super_name, placeholder : "Heroine Super Name" %> </p>
+    <%= t.label :power %><br />
+    <%= t.collection_select(:power_id, @power, :id, :name, :include_blank => "Please select") %>
+
+<%= t.submit %>
+<% end %>
+
