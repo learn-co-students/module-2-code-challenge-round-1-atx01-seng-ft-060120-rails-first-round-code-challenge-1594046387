@@ -7,7 +7,7 @@
       <br>
       Description: <%= power.description %>
       <br>
-      Heroines with power: <%= HeroinePower.where(power_id: power.id).count %>
+      Heroines with power: <%= HeroinePower.all.where(power_id: power.id).count %>
     </li>
     <br>
   <% end %>
