@@ -24,3 +24,10 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+Heroine.all.each do |heroine|
+  herp = HeroinePower.new
+  herp.heroine = heroine
+  herp.power = Power.all.sample
+  herp.save
+end
