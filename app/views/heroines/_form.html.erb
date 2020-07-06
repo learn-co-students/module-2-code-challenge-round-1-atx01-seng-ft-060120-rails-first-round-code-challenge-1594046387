@@ -1,0 +1,12 @@
+<%= form_for Heroine.new do |f|  %>
+
+    <p> Enter information</p>
+    
+        Name; <%= f.text_field :name %>
+    <br>
+        Hero Name; <%= f.text_field :super_name %>
+    <br>
+    
+    <br>
+        <%= f.submit %>
+    <% end %>
