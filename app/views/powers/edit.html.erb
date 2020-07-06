@@ -1,0 +1,22 @@
+<h1>Edit a Power!</h1>
+<br><br>
+<div>
+<h3>
+<%= form_for(@power) do |f| %>
+    <%= f.label "Name: " %>
+    <%= f.text_field :name %>
+    <br><br>
+
+    <%= f.label "Description: " %>
+    <%= f.text_field :description %>
+    <br><br>
+
+    <%= f.label "Heroes that have this Power: "%>
+    <br>
+    <%= f.collection_check_boxes(:heroine_ids, @heroines, :id, :name)%>
+    <br><br><br>
+
+    <%= f.submit %>
+<%end%>
+</h3>
+</div>
