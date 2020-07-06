@@ -1,0 +1,8 @@
+<h3>Edit <%= @power.name %>:</h3>
+
+<%= form_for(@power) do |f| %>
+Name: <%= f.text_field :name %><br>
+Description: <%= f.text_field :description %><br>
+Heroines:<br><%= f.collection_check_boxes(:heroine_ids, Heroine.all, :id, :name) %>
+<%= f.submit %>
+<% end %>
